@@ -23,34 +23,20 @@ class Vehicle:
         self.name = name
 
 class GroundVehicle(Vehicle):
-    def __init__(self, name):
-        self.name = name
+    pass
 
 class Car(GroundVehicle):
-    def __init__(self, name, horsepower):
-        self.name = name
-        self.horsepower = horsepower
+    pass
 
 class Motorcycle(GroundVehicle):
-    def __init__(self, name, cubic_centimeters):
-        self.name = name
-        self.cubic_centimeters = cubic_centimeters
+    pass
 
 class FlightVehicle(Vehicle):
-    def __init__(self, name):
-        self.name = name
+    pass
 
 class Starship(FlightVehicle):
-    def __init__(self, name, max_speed):
-        self.name = name
-        self.max_speed = max_speed
+    pass
 
 class Airplane(FlightVehicle):
-    def __init__(self, name, propulsion_type):
-        self.name = name
-        self.propulsion_type = propulsion_type
+    pass
 
-plane = Airplane("Jet", "Jet thrust")
-ship = Starship("Saucer", "55000")
-
-print(ship.max_speed)
