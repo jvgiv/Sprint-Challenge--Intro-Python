@@ -1,10 +1,10 @@
-
+import csv
 # Create a class to hold a city location. Call the class "City". It should have
 # fields for name, lat and lon (representing latitude and longitude).
 
 class City:
-  def __init__(self, city, lat, lon):
-    self.city = city
+  def __init__(self, name, lat, lon):
+    self.name = name
     self.lat = lat
     self.lon = lon
     
@@ -23,14 +23,13 @@ class City:
 
 cities = []
 
-import csv
-def cityreader(cities=[]):
+
   # TODO Implement the functionality to read from the 'cities.csv' file
   # For each city record, create a new City instance and add it to the 
   # `cities` list
-  
-  with open('cities.csv', newline='') as csvcitylist:
-    reader = csv.reader(csvcitylist)
+def cityreader(cities=[]):
+  with open('cities.csv', newline='') as csvfile:
+    reader = csv.reader(csvfile)
     for row in reader:
       cities.append(City(row[0], row[3], row[4]))
     
@@ -39,8 +38,8 @@ def cityreader(cities=[]):
 cityobj = cityreader(cities)
 
 # Print the list of cities (name, lat, lon), 1 record per line.
-for c in cityobj:
-    print(c)
+for city in cityobj:
+    print(city)
 
 # STRETCH GOAL!
 #
